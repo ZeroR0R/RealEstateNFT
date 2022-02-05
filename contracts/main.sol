@@ -9,7 +9,7 @@ contract RealEstateOwnership is ERC721("Real Estate NFT", "REO") {
 
     constructor() {
         owner = msg.sender;
-        _mint(owner, 0);
+        _mint(owner, 990302001800400812006);
 
     }
 
@@ -18,8 +18,11 @@ contract RealEstateOwnership is ERC721("Real Estate NFT", "REO") {
 // Potential to add city, state, country, and others however this would be difficut with only integers
 
     function createRealEstateToken(uint _beds, uint _bath, uint _sqft, uint _zip, uint _yearBuilt) public {
-
-        _mint(msg.sender, _sqft);
+        // Syntax should go as follows, two 9s for padding (Exactly similar houses for example), Beds (2), Bathrooms (2),
+        // Sqft (6), zip (5), year built (4). 21 digits, 000000000000000000000
+        // Example: 3 beds, 2 baths, 1800 sqft, 40081 zip, built in 2006 would equate to:
+        // 990302001800400812006
+        _mint(msg.sender, _beds);
 
     }
 
