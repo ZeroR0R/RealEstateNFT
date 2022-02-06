@@ -22,6 +22,15 @@ contract RealEstateOwnership is ERC721("Real Estate NFT", "REO") {
         // Sqft (6), zip (5), year built (4). 21 digits, 000000000000000000000
         // Example: 3 beds, 2 baths, 1800 sqft, 40081 zip, built in 2006 would equate to:
         // 990302001800400812006
+
+        // Require Values fit Syntax
+
+        require(_beds <= 99, "Beds Needs to be 2 digits");
+        require(_bath <= 99, "Bath Needs to be 2 digits");
+        require(_sqft <= 9999, "Area Needs to be 4 digits");
+        require(_zip <= 99999, "Zip Needs to be 5 digits");
+        require(_yearBuilt <= 9999, "Year built needs to be 4 digits");
+
         _mint(msg.sender, _beds);
 
     }
