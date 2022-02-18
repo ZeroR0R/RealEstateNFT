@@ -1,0 +1,14 @@
+.mint__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mint__input {
+  padding: 20rem 10rem;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+
+  font-size: 20px;
+}
